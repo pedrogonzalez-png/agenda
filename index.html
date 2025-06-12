@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Agenda de Reservas 2025</title>
+    <link rel="stylesheet" href="./css/index.css" />
+</head>
+
+<body>
+    <div class="vidro-fosco">
+        <div class="container">
+            <h1>Agenda de Reservas 2025</h1>
+
+            <div class="menu-meses">
+                <input type="radio" id="mes-0" name="mes" value="0" checked />
+                <label for="mes-0">Janeiro</label>
+                <input type="radio" id="mes-1" name="mes" value="1" />
+                <label for="mes-1">Fevereiro</label>
+                <input type="radio" id="mes-2" name="mes" value="2" />
+                <label for="mes-2">Março</label>
+                <input type="radio" id="mes-3" name="mes" value="3" />
+                <label for="mes-3">Abril</label>
+                <input type="radio" id="mes-4" name="mes" value="4" />
+                <label for="mes-4">Maio</label>
+                <input type="radio" id="mes-5" name="mes" value="5" />
+                <label for="mes-5">Junho</label>
+                <input type="radio" id="mes-6" name="mes" value="6" />
+                <label for="mes-6">Julho</label>
+                <input type="radio" id="mes-7" name="mes" value="7" />
+                <label for="mes-7">Agosto</label>
+                <input type="radio" id="mes-8" name="mes" value="8" />
+                <label for="mes-8">Setembro</label>
+                <input type="radio" id="mes-9" name="mes" value="9" />
+                <label for="mes-9">Outubro</label>
+                <input type="radio" id="mes-10" name="mes" value="10" />
+                <label for="mes-10">Novembro</label>
+                <input type="radio" id="mes-11" name="mes" value="11" />
+                <label for="mes-11">Dezembro</label>
+            </div>
+            <div class="agenda"></div>
+
+            <!-- Modal reserva -->
+            <div id="modal-reserva" class="modal" style="display:none;">
+                <div class="modal-content">
+                    <h2>Nova Reserva</h2>
+                    <p>Data selecionada: <span id="modal-data"></span></p>
+                    <label for="input-hora-inicio">Horário de início (entre 08:00 e 19:00):</label>
+                    <input type="time" id="input-hora-inicio" min="08:00" max="19:00" step="900" required />
+                    <label for="input-hora-fim">Horário de término (máximo até 22:00):</label>
+                    <input type="time" id="input-hora-fim" min="08:00" max="22:00" step="900" required />
+                    <p id="modal-msg" class="modal-msg"></p>
+                    <div id="reservas-dia" class="reservas-dia"></div>
+                    <div class="modal-buttons">
+                        <button id="btn-confirmar">Confirmar</button>
+                        <button id="btn-cancelar">Cancelar</button>
+                    </div>
+                </div>
+            </div>
+            <script src="./index.js"></script>
+</body>
+
+</html>
